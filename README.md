@@ -59,7 +59,6 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 
 ```js
 const { defineConfig } = require("cypress")
-//const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   e2e: {
