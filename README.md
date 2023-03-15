@@ -59,21 +59,13 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 
 ```json
 
-const { defineConfig } = require("cypress")
-module.exports = defineConfig({
-  e2e: {
+{
     baseUrl: 'https://www.psicologiaviva.com.br',
     baseURLBuscaExterna: 'https://www.psicologiaviva.com.br/psicologo/',
     "experimentalSessionAndOrigin": true,
     "chromeWebSecurity": false,
     viewportWidth: 1920,
     viewportHeight: 1080,
-    "hideXHR": true,
-    setupNodeEvents(on, config) {
-      //allureWriter(on, config);
-      return config
-      // implement node event listeners here
-    },
-  },
-})
+    "hideXHR": true
+}
 ```
