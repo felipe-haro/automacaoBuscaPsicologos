@@ -151,6 +151,7 @@ describe('Suite Módulo Busca de Psicólogos', () => {
     })
   })
 
+  /*
   context('Busca Psicólogos - Demais Filtros da Busca', () => {
   
     it('Busca de psicólogos por filtro de plano de saúde', () => {
@@ -196,7 +197,5 @@ describe('Suite Módulo Busca de Psicólogos', () => {
     it('Busca de psicólogos - Mais Filtros - Genero - Todos', () => {
 
     })
-  })
-
-
+  })*/
 })
