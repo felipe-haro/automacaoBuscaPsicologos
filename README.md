@@ -30,7 +30,7 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 
 1. Abra o navegador
 2. Acesse a URL (AJUSTAR URL)
-3. Faça um [fork](ajustarURL) do projeto
+3. Faça um [fork](https://github.com/felipe-haro/automacaoBuscaPsicologos) do projeto
 
 > 👨‍🏫 É de extrema importância que você trabalhe no seu fork, para que possa rodar os testes em um _pipeline_ de integração contínua.
 
@@ -42,9 +42,9 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 
 5. Em seu terminal de linha de comando (em uma pasta onde você armazene seus projetos de software), execute o comando `git clone [cole-o-link-copiado-aqui]`.
 
-> 👨‍🏫 Para garantir que está clonando o seu fork, verifique a existência do seu usuário no GitHub na URL de clone do projeto. Algo como o seguinte `git@github.com:[seu-usuário-aqui]/ajustarrepositório`
+> 👨‍🏫 Para garantir que está clonando o seu fork, verifique a existência do seu usuário no GitHub na URL de clone do projeto. Algo como o seguinte `git@github.com:[seu-usuário-aqui]/automacaoBuscaPsicologos`
 
-6. Após o clone do projeto, acesse o diretório recém clonado (ex.: `cd ajustarrepositório`).
+6. Após o clone do projeto, acesse o diretório recém clonado (ex.: `cd automacaoBuscaPsicologos`).
 
 ## Instalação e inicialização do [Cypress](https://cypress.io) 🌲
 
