@@ -58,6 +58,7 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 1. Atualize o arquivo `cypress.config.js` conforme abaixo.
 
 ```json
+
 const { defineConfig } = require("cypress")
 module.exports = defineConfig({
   e2e: {
@@ -75,3 +76,4 @@ module.exports = defineConfig({
     },
   },
 })
+```
