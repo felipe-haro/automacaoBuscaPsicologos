@@ -70,7 +70,6 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     "hideXHR": true,
     setupNodeEvents(on, config) {
-      //allureWriter(on, config);
       return config
       // implement node event listeners here
     },
