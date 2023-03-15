@@ -10,7 +10,7 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.visit('/')
     })
 
-    it.only('Realizar busca de psicólogos através do menu suspenso do site, verificando se a quantidade de profissionais na busca é de 5 por página.', () => {
+    it('Realizar busca de psicólogos através do menu suspenso do site, verificando se a quantidade de profissionais na busca é de 5 por página.', () => {
 
       cy.title().should('eq', 'Consulte com um psicólogo online de qualquer lugar - Psicologia Viva')
       cy.contains('Nossos Especialistas').click()
