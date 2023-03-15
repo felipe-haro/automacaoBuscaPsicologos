@@ -57,15 +57,24 @@ Antes de começar, garanta que os seguintes sistemas estejam instalados em seu c
 
 1. Atualize o arquivo `cypress.config.js` conforme abaixo.
 
-```json
+```js
+const { defineConfig } = require("cypress")
+//const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
-{
+module.exports = defineConfig({
+  e2e: {
     baseUrl: 'https://www.psicologiaviva.com.br',
     baseURLBuscaExterna: 'https://www.psicologiaviva.com.br/psicologo/',
     "experimentalSessionAndOrigin": true,
     "chromeWebSecurity": false,
     viewportWidth: 1920,
     viewportHeight: 1080,
-    "hideXHR": true
-}
+    "hideXHR": true,
+    setupNodeEvents(on, config) {
+      //allureWriter(on, config);
+      return config
+      // implement node event listeners here
+    },
+  },
+})
 ```
