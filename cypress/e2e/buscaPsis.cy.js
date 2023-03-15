@@ -10,7 +10,7 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.visit('/')
     })
 
-    it('Realizar busca de psicólogos através do menu suspenso do site, verificando se a quantidade de profissionais na busca é de 5 por página.', () => {
+    it.only('Realizar busca de psicólogos através do menu suspenso do site, verificando se a quantidade de profissionais na busca é de 5 por página.', () => {
 
       cy.title().should('eq', 'Consulte com um psicólogo online de qualquer lugar - Psicologia Viva')
       cy.contains('Nossos Especialistas').click()
@@ -18,7 +18,7 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.wait(7000)
 
       cy.get('.text-h6.text-center')
-        .should('have.text', ' Conheça alguns dos profissionais credenciados ')
+        .should('have.text', ' Conheça alguns dos profissionais credenciados  Encontre os melhores psicologos online aqui na Psicologia Viva ')
       cy.get('#resultados')
         .should('be.visible')
 
