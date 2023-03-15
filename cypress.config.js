@@ -9,6 +9,7 @@ module.exports = defineConfig({
     "chromeWebSecurity": false,
     viewportWidth: 1920,
     viewportHeight: 1080,
+    videoCompression: 10,
     "hideXHR": true,
     setupNodeEvents(on, config) {
       //allureWriter(on, config);
