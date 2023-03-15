@@ -99,7 +99,7 @@ Cypress.Commands.add('buscaPorEspecialidades', () => {
   cy.get('div:contains(Psicologia Clínica)')
     .click({ multiple: true, force: true })
 
-  cy.wait(4000)
+  cy.wait(6000)
   cy.get('span:contains( Procurar )')
     .click()
 })
