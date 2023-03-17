@@ -12,14 +12,19 @@ describe('Suite Módulo Busca de Psicólogos', () => {
 
     it('Realizar busca de psicólogos através do menu suspenso do site, verificando se a quantidade de profissionais na busca é de 5 por página.', () => {
 
-      cy.title().should('eq', 'Consulte com um psicólogo online de qualquer lugar - Psicologia Viva')
-      cy.contains('Nossos Especialistas').click()
+      cy.title()
+        .should('eq', 'Consulte com um psicólogo online de qualquer lugar - Psicologia Viva')
 
-      cy.wait(7000)
+      cy.contains('Nossos Especialistas')
+        .click()
 
-      cy.get('.text-h6.text-center')
+      cy.get('.text-h6.text-center', { timeout: 10000 })
         .should('have.text', ' Conheça alguns dos profissionais credenciados  Encontre os melhores psicologos online aqui na Psicologia Viva ')
+      
       cy.get('#resultados')
+        .should('be.visible')
+
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -32,9 +37,13 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.get('#botaoAgendamentoConsulta')
         .click()
 
-      cy.wait(7000)
+      cy.get('#resultados', { timeout: 10000 })
+        .should('be.visible')
 
       cy.get('#resultados')
+        .should('be.visible')
+
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -47,9 +56,13 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.get('.btn-primary-alt')
         .click()
 
-      cy.wait(7000)
+      cy.get('#resultados', { timeout: 10000 })
+        .should('be.visible')
 
       cy.get('#resultados')
+        .should('be.visible')
+      
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -64,9 +77,13 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.get('.btn-primary-alt')
         .click()
 
-      cy.wait(7000)
+      cy.get('#resultados', { timeout: 10000 })
+        .should('be.visible')
 
       cy.get('#resultados')
+        .should('be.visible')
+
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -85,6 +102,9 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.get('#resultados')
         .should('be.visible')
 
+      cy.get('.flex-column', { timeout: 10000 })
+        .should('be.visible')
+
       cy.get('.flex-column')
         .find('.v-responsive__content')
         .should('have.length', 5)
@@ -93,10 +113,12 @@ describe('Suite Módulo Busca de Psicólogos', () => {
     it('Busca de psicólogos por Área', () => {
 
       cy.buscaExternaURL()
-      cy.wait(4000)
       cy.buscaPorArea()
 
       cy.get('#resultados')
+        .should('be.visible')
+
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -112,6 +134,9 @@ describe('Suite Módulo Busca de Psicólogos', () => {
       cy.get('#resultados')
         .should('be.visible')
 
+      cy.get('.flex-column', { timeout: 10000 })
+        .should('be.visible')  
+      
       cy.get('.flex-column')
         .find('.v-responsive__content')
         .should('have.length', 5)
@@ -120,10 +145,12 @@ describe('Suite Módulo Busca de Psicólogos', () => {
     it('Busca de psicólogos por Especialidades', () => {
 
       cy.buscaExternaURL()
-      cy.wait(4000)
       cy.buscaPorEspecialidades()
 
       cy.get('#resultados')
+        .should('be.visible')
+
+      cy.get('.flex-column', { timeout: 10000 })
         .should('be.visible')
 
       cy.get('.flex-column')
@@ -134,7 +161,6 @@ describe('Suite Módulo Busca de Psicólogos', () => {
     it('Busca por Psicólogo Específico', () => {
 
       cy.buscaExternaURL()
-      cy.wait(4000)
       cy.buscaPorPsicologoEspecifico(nomePsicologo)
 
       cy.get('#resultados')
@@ -142,6 +168,9 @@ describe('Suite Módulo Busca de Psicólogos', () => {
 
       cy.get('h1:contains( Luciene Pereira Maximiano )')
         .should('have.text', ' Luciene Pereira Maximiano ')
+
+      cy.get('.flex-column', { timeout: 10000 })
+        .should('be.visible')
 
       cy.get('.flex-column')
         .find('.v-responsive__content')
@@ -198,4 +227,5 @@ describe('Suite Módulo Busca de Psicólogos', () => {
 
     })
   })*/
+
 })
